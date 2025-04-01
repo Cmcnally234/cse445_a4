@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Error 1: Root element is Hotel instead of Hotels -->
+<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Hotels.xsd">
+  <!-- Hotel with multiple names (Error 5) -->
+  <Hotel Rating="4.2">
+    <Name>Westin</Name>
+    <Name>Westin Phoenix</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearstAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E.7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- Hotel with missing Phone (Error 3) -->
+  <Hotel>
+    <Name>Hyatt Place Phoenix/Mesa</Name>
+    <!-- Phone element is missing -->
+    <Address NearstAirport="Sky Harbor">
+      <Number>1422</Number>
+      <Street>W Bass Pro Dr</Street>
+      <City>Mesa</City>
+      <State>AZ</State>
+      <Zip>85201</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- Hotel with missing required attribute (Error 2) -->
+  <Hotel>
+    <Name>Marriott Phoenix Resort Tempe</Name>
+    <Phone>602-225-9000</Phone>
+    <!-- NearstAirport required attribute is missing -->
+    <Address>
+      <Number>2000</Number>
+      <Street>W Westcourt Way</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85282</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- Hotel with no closing tag for Address (Error 4) -->
+  <Hotel>
+    <Name>Renaissance Phoenix Downtown</Name>
+    <Phone>602-333-0000</Phone>
+    <Address NearstAirport="Sky Harbor">
+      <Number>100</Number>
+      <Street>N 1st St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    <!-- Missing closing tag for Address -->
+  </Hotel>
+</Hotel>
