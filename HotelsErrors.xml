@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Error 1: Root element is Hotel instead of Hotels -->
 <Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Hotels.xsd">
-  <!-- Hotel with multiple names (Error 5) -->
   <Hotel Rating="4.2">
     <Name>Westin</Name>
     <Name>Westin Phoenix</Name>
@@ -16,10 +14,8 @@
     </Address>
   </Hotel>
   
-  <!-- Hotel with missing Phone (Error 3) -->
   <Hotel>
     <Name>Hyatt Place Phoenix/Mesa</Name>
-    <!-- Phone element is missing -->
     <Address NearstAirport="Sky Harbor">
       <Number>1422</Number>
       <Street>W Bass Pro Dr</Street>
@@ -29,11 +25,9 @@
     </Address>
   </Hotel>
   
-  <!-- Hotel with missing required attribute (Error 2) -->
   <Hotel>
     <Name>Marriott Phoenix Resort Tempe</Name>
     <Phone>602-225-9000</Phone>
-    <!-- NearstAirport required attribute is missing -->
     <Address>
       <Number>2000</Number>
       <Street>W Westcourt Way</Street>
@@ -43,7 +37,6 @@
     </Address>
   </Hotel>
   
-  <!-- Hotel with no closing tag for Address (Error 4) -->
   <Hotel>
     <Name>Renaissance Phoenix Downtown</Name>
     <Phone>602-333-0000</Phone>
@@ -53,6 +46,5 @@
       <City>Phoenix</City>
       <State>AZ</State>
       <Zip>85004</Zip>
-    <!-- Missing closing tag for Address -->
   </Hotel>
 </Hotel>
